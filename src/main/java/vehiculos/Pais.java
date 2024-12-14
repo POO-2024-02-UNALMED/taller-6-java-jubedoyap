@@ -22,7 +22,7 @@ public class Pais {
 	
 
 	public static Pais paisMasVendedor(){
-		Pais paisGanador = "";
+		Pais paisGanador;
 		int valorMayor = 0;
 		int indexGanador = 0;
 		ArrayList<Pais> paises = Vehiculo.getPaises();

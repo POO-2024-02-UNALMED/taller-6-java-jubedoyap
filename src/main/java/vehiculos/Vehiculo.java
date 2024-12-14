@@ -13,9 +13,9 @@ public class Vehiculo {
 	private String traccion;
 	private Fabricante fabricante;
 	private static int cantidadVehiculos;
-	private static ArrayList<Pais> paises = new ArrayList<String>();
+	private static ArrayList<Pais> paises = new ArrayList<Pais>();
 	private static ArrayList<Integer> contadores = new ArrayList<Integer>();
-	private static ArrayList<Fabricante> fabricas = new ArrayList<String>();
+	private static ArrayList<Fabricante> fabricas = new ArrayList<Fabricante>();
 	private static ArrayList<Integer> contadores2 = new ArrayList<Integer>();
 	
 	public Vehiculo(String placa, int puertas, int velocidadMaxima, String nombre, int precio, int peso, String traccion, Fabricante fabricante) {

@@ -31,7 +31,7 @@ public class Fabricante {
 	
 
 	public static String fabricaMayorVentas(){
-		Fabricante fabricaGanadora = "";
+		Fabricante fabricaGanadora;
 		int valorMayor = 0;
 		int indexGanador = 0;
 		ArrayList<Fabricante> fabricas = Vehiculo.getFabricas();
