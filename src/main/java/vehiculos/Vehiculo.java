@@ -13,9 +13,9 @@ public class Vehiculo {
 	private String traccion;
 	private Fabricante fabricante;
 	private static int cantidadVehiculos;
-	private static ArrayList<String> paises = new ArrayList<String>();
+	private static ArrayList<Pais> paises = new ArrayList<String>();
 	private static ArrayList<Integer> contadores = new ArrayList<Integer>();
-	private static ArrayList<String> fabricas = new ArrayList<String>();
+	private static ArrayList<Fabricante> fabricas = new ArrayList<String>();
 	private static ArrayList<Integer> contadores2 = new ArrayList<Integer>();
 	
 	public Vehiculo(String placa, int puertas, int velocidadMaxima, String nombre, int precio, int peso, String traccion, Fabricante fabricante) {
@@ -28,18 +28,18 @@ public class Vehiculo {
 		this.traccion = traccion;
 		this.fabricante = fabricante;
 		cantidadVehiculos++;
-		if(paises.contains(fabricante.getPais().getNombre())) {//De esta forma se verifica si el pais está en la lista, en caso de que sí se incrementa en 1 el valor de veces que aparece
-			contadores.set(paises.indexOf(fabricante.getPais().getNombre()), contadores.get(paises.indexOf(fabricante.getPais().getNombre())) +1);
+		if(paises.contains(fabricante.getPais())) {//De esta forma se verifica si el pais está en la lista, en caso de que sí se incrementa en 1 el valor de veces que aparece
+			contadores.set(paises.indexOf(fabricante.getPais()), contadores.get(paises.indexOf(fabricante.getPais())) +1);
 		}
 		else {//Si no está se crea su espacio en paises y en contadores se aumenta en 1
-			paises.add(fabricante.getPais().getNombre());
+			paises.add(fabricante.getPais());
 		    contadores.add(1);
 		}
-		if(fabricas.contains(fabricante.getNombre())) {//De esta forma se verifica si la fábrica está en la lista, en caso de que sí se incrementa en 1 el valor de veces que aparece
-			contadores2.set(fabricas.indexOf(fabricante.getNombre()), contadores2.get(fabricas.indexOf(fabricante.getNombre())) +1);
+		if(fabricas.contains(fabricante) {//De esta forma se verifica si la fábrica está en la lista, en caso de que sí se incrementa en 1 el valor de veces que aparece
+			contadores2.set(fabricas.indexOf(fabricante), contadores2.get(fabricas.indexOf(fabricante)) +1);
 		}
 		else {//Si no está se crea su espacio en fabricas y en contadores se aumenta en 1
-			fabricas.add(fabricante.getNombre());
+			fabricas.add(fabricante);
 		    contadores2.add(1);
 		}
 		
@@ -61,7 +61,7 @@ public class Vehiculo {
 		puertas = nuevasPuertas;
 	}
 	
-	public int getVelocidaMaxima() {
+	public int getVelocidadMaxima() {
 		return velocidadMaxima;
 	}
 	
@@ -113,6 +113,10 @@ public class Vehiculo {
 		return cantidadVehiculos;
 	}
 	
+	public static void setCantidadVehiculos(int nuevaCantidad) {
+		cantidadVehiculos = nuevaCantidad;
+	}
+	
 	//Metodo vehiculosPorTipo
 	public String vehiculosPorTipo() {
 		return "Automoviles: "+ Automovil.cantidadAutomoviles()+ "\n" + 
@@ -121,7 +125,7 @@ public class Vehiculo {
 	}
 	
 	//Metodo para obtener la lista de paises que venden los vehiculos
-	public static ArrayList<String> getPaises(){
+	public static ArrayList<Pais> getPaises(){
 		return paises;
 	}
 	
@@ -131,7 +135,7 @@ public class Vehiculo {
 	}
 	
 	//Metodo para obtener la lista de fabricas que venden los vehiculos
-	public static ArrayList<String> getFabricas(){
+	public static ArrayList<Fabricante> getFabricas(){
 		return fabricas;
 	}
 		

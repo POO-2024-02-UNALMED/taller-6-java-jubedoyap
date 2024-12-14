@@ -21,11 +21,11 @@ public class Pais {
 	}
 	
 	//Método para poder obtener el pais que más ventas genera
-	public String paisMasVendedor(){
-		String paisGanador = "";
+	public static Pais paisMasVendedor(){
+		Pais paisGanador = "";
 		int valorMayor = 0;
 		int indexGanador = 0;
-		ArrayList<String> paises = Vehiculo.getPaises();
+		ArrayList<Pais> paises = Vehiculo.getPaises();
 		ArrayList<Integer> contadores = Vehiculo.getContadores();
 		for (int i = 0; i<contadores.size(); i++) {
 			if (contadores.get(i) >= valorMayor) {

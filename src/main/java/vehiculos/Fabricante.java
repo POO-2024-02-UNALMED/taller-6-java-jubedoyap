@@ -30,19 +30,19 @@ public class Fabricante {
 	}
 	
 	//Método para poder obtener la fábrica que más ventas genera
-		public String paisMasVendedor(){
-			String fabricaGanadora = "";
-			int valorMayor = 0;
-			int indexGanador = 0;
-			ArrayList<String> fabricas = Vehiculo.getFabricas();
-			ArrayList<Integer> contadores2 = Vehiculo.getContadores2();
-			for (int i = 0; i<contadores2.size(); i++) {
-				if (contadores2.get(i) >= valorMayor) {
-					valorMayor = contadores2.get(i);
-					indexGanador = i;
-				}
+	public static String fabricaMayorVentas(){
+		Fabricante fabricaGanadora = "";
+		int valorMayor = 0;
+		int indexGanador = 0;
+		ArrayList<Fabricante> fabricas = Vehiculo.getFabricas();
+		ArrayList<Integer> contadores2 = Vehiculo.getContadores2();
+		for (int i = 0; i<contadores2.size(); i++) {
+			if (contadores2.get(i) >= valorMayor) {
+				valorMayor = contadores2.get(i);
+				indexGanador = i;
 			}
-			fabricaGanadora = fabricas.get(indexGanador);
-			return fabricaGanadora;
 		}
+		fabricaGanadora = fabricas.get(indexGanador);
+		return fabricaGanadora;
+	}
 }
