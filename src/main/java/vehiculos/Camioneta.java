@@ -7,7 +7,7 @@ public class Camioneta extends Vehiculo  {
 	private boolean volco;
 	private static ArrayList<Camioneta> listado = new ArrayList<Camioneta>();
 	
-	public Camioneta(String placa, int puertas, int velocidadMaxima, String nombre, int precio, int peso, String traccion, Fabricante fabricante, boolean volco) {
+	public Camioneta(String placa, int puertas,String nombre, int precio, int peso, Fabricante fabricante, boolean volco) {
 		
 		super(placa, puertas, 90, nombre, precio, peso, "4x4", fabricante);
 		this.volco = volco;
