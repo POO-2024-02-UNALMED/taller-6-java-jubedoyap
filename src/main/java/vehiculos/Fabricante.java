@@ -30,7 +30,7 @@ public class Fabricante {
 	}
 	
 
-	public static String fabricaMayorVentas(){
+	public static Fabricante fabricaMayorVentas(){
 		Fabricante fabricaGanadora;
 		int valorMayor = 0;
 		int indexGanador = 0;
