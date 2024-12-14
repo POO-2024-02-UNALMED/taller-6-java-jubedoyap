@@ -29,7 +29,7 @@ public class Fabricante {
 		pais = nuevoPais;
 	}
 	
-	//Método para poder obtener la fábrica que más ventas genera
+
 	public static String fabricaMayorVentas(){
 		Fabricante fabricaGanadora = "";
 		int valorMayor = 0;

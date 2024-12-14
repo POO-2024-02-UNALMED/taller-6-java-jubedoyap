@@ -22,7 +22,6 @@ public class Camion extends Vehiculo {
 		ejes = nuevosEjes;
 	}
 	
-	//Método que retorna la cantidad de objetos tipo Camion creados
 	public static int cantidadCamiones() {
 		return Camion.listado.size()
 ;	}

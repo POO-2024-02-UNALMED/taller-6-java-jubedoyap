@@ -22,7 +22,7 @@ public class Camioneta extends Vehiculo  {
 		this.volco = volco;
 	}
 	
-	//Método que retorna la cantidad de objetos tipo Camioneta creados
+
 	public static int cantidadCamionetas() {
 		return Camioneta.listado.size();
 	}

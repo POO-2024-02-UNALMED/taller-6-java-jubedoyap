@@ -22,7 +22,7 @@ public class Automovil extends Vehiculo {
 		puestos = nuevosPuestos;
 	}
 	
-	//Método que retorna la cantidad de objetos tipo Automovil creados
+
 	public static int cantidadAutomoviles() {
 		return Automovil.listado.size();
 	}

@@ -20,7 +20,7 @@ public class Pais {
 		nombre = nuevoNombre; 
 	}
 	
-	//Método para poder obtener el pais que más ventas genera
+
 	public static Pais paisMasVendedor(){
 		Pais paisGanador = "";
 		int valorMayor = 0;

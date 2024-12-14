@@ -28,17 +28,17 @@ public class Vehiculo {
 		this.traccion = traccion;
 		this.fabricante = fabricante;
 		cantidadVehiculos++;
-		if(paises.contains(fabricante.getPais())) {//De esta forma se verifica si el pais está en la lista, en caso de que sí se incrementa en 1 el valor de veces que aparece
+		if(paises.contains(fabricante.getPais())) {
 			contadores.set(paises.indexOf(fabricante.getPais()), contadores.get(paises.indexOf(fabricante.getPais())) +1);
 		}
-		else {//Si no está se crea su espacio en paises y en contadores se aumenta en 1
+		else {
 			paises.add(fabricante.getPais());
 		    contadores.add(1);
 		}
-		if(fabricas.contains(fabricante) {//De esta forma se verifica si la fábrica está en la lista, en caso de que sí se incrementa en 1 el valor de veces que aparece
+		if(fabricas.contains(fabricante)) {
 			contadores2.set(fabricas.indexOf(fabricante), contadores2.get(fabricas.indexOf(fabricante)) +1);
 		}
-		else {//Si no está se crea su espacio en fabricas y en contadores se aumenta en 1
+		else {
 			fabricas.add(fabricante);
 		    contadores2.add(1);
 		}
@@ -117,29 +117,29 @@ public class Vehiculo {
 		cantidadVehiculos = nuevaCantidad;
 	}
 	
-	//Metodo vehiculosPorTipo
+	
 	public String vehiculosPorTipo() {
 		return "Automoviles: "+ Automovil.cantidadAutomoviles()+ "\n" + 
 				"Camionetas: "+ Camioneta.cantidadCamionetas()+ "\n" + 
 				"Camiones: "+ Camion.cantidadCamiones();
 	}
 	
-	//Metodo para obtener la lista de paises que venden los vehiculos
+	
 	public static ArrayList<Pais> getPaises(){
 		return paises;
 	}
 	
-	////Metodo para obtener los contadores de los paises que venden los vehiculos
+	
 	public static ArrayList<Integer> getContadores(){
 		return contadores;
 	}
 	
-	//Metodo para obtener la lista de fabricas que venden los vehiculos
+	
 	public static ArrayList<Fabricante> getFabricas(){
 		return fabricas;
 	}
 		
-	////Metodo para obtener los contadores de las fabricas que venden los vehiculos
+	
 	public static ArrayList<Integer> getContadores2(){
 		return contadores2;
 	}
